@@ -8,70 +8,109 @@ class WeatherPage extends StatefulWidget {
 }
 
 class _WeatherPageState extends State<WeatherPage> {
+  final List<Gradient> myColor = [
+    LinearGradient(
+      colors: [
+        Colors.redAccent,
+        Colors.black87,
+      ],
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight,
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.grey,
-        title: Text(
-          'Pawang Hujan',
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+      // appBar: AppBar(
+      //   centerTitle: true,
+      //   title: Text(
+      //     'Pawang Hujan',
+      //     style: TextStyle(
+      //       fontSize: 20,
+      //       fontWeight: FontWeight.bold,
+      //     ),
+      //   ),
+      // ),
+
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: myColor[0],
+        ),
+        child: Expanded(
+          child: Container(
+            margin: EdgeInsets.all(50),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20
+              ),
+            ),
+            child: Column(
+              children: [
+                SizedBox(height: 20),
+                Image.network(
+                  'https://picsum.photos/seed/picsum/100/150',
+                ),
+                SizedBox(height: 20),
+                Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Selamat datang di Pawang Hujan!',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      Padding(
+                        padding: EdgeInsets.only(left: 20, right: 20),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            errorBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            hintText: 'Cari kata kunci...',
+                            hintStyle: TextStyle(
+                              color: Colors.grey,
+                            ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            suffixIcon: Icon(
+                              Icons.search,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 20),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                  ),
+                  child: Text('Cari', 
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  onPressed: () {
+                    
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Selamat datang di Pawang Hujan!',
-              style: TextStyle(
-                fontSize: 14, 
-                color: Colors.black,
-              ),
-            ),
-            SizedBox(height: 20),
-            Padding(
-              padding: EdgeInsets.only(left: 20, right: 20),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Ex Tangerang', 
-                  hintStyle: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 14,
-                  ),
-                  border: OutlineInputBorder(),
-                  suffixIcon: Icon(
-                    Icons.search
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: 20),
-            SizedBox(
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                ),
-                child: Text(
-                  'Cek Cuaca',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton.small(
         onPressed: () {
           
         },
