@@ -69,7 +69,6 @@ class _WeatherPageState extends State<WeatherPage> {
                         padding: EdgeInsets.only(left: 20, right: 20),
                         child: TextField(
                           decoration: InputDecoration(
-                            errorBorder: InputBorder.none,
                             hintText: 'Cari kata kunci...',
                             hintStyle: TextStyle(
                               color: Colors.grey,
@@ -80,6 +79,7 @@ class _WeatherPageState extends State<WeatherPage> {
                             suffixIcon: Icon(
                               Icons.search,
                             ),
+                            if
                           ),
                         ),
                       ),
