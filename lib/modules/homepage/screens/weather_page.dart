@@ -11,8 +11,8 @@ class _WeatherPageState extends State<WeatherPage> {
   final List<Gradient> myColor = [
     LinearGradient(
       colors: [
-        Colors.redAccent,
-        Colors.black87,
+        Colors.blue,
+        Colors.red,
       ],
       begin: Alignment.centerLeft,
       end: Alignment.centerRight,
@@ -69,9 +69,7 @@ class _WeatherPageState extends State<WeatherPage> {
                         padding: EdgeInsets.only(left: 20, right: 20),
                         child: TextField(
                           decoration: InputDecoration(
-                            errorBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
+                            errorBorder: InputBorder.none,
                             hintText: 'Cari kata kunci...',
                             hintStyle: TextStyle(
                               color: Colors.grey,
@@ -89,6 +87,27 @@ class _WeatherPageState extends State<WeatherPage> {
                   ),
                 ),
                 SizedBox(height: 20),
+                // GestureDetector(
+                //   onTap: () {
+                    
+                //   },
+                //   child: Container(
+                //     width: 100,
+                //     height: 40,
+                //     decoration: BoxDecoration(
+                //       color: Colors.blue,
+                //       borderRadius: BorderRadius.circular(5),
+                //     ),
+                //     child: Center(
+                //       child: Text(
+                //         'Cari',
+                //         style: TextStyle(
+                //           color: Colors.white,
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
