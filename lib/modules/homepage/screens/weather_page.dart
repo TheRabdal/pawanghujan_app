@@ -19,16 +19,16 @@ class _WeatherPageState extends State<WeatherPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   centerTitle: true,
-      //   title: Text(
-      //     'Pawang Hujan',
-      //     style: TextStyle(
-      //       fontSize: 20,
-      //       fontWeight: FontWeight.bold,
-      //     ),
-      //   ),
-      // ),
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          'Pawang Hujan',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
       body: Container(
         decoration: BoxDecoration(gradient: myColor[0]),
         child: Expanded(
