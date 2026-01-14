@@ -10,10 +10,7 @@ class WeatherPage extends StatefulWidget {
 class _WeatherPageState extends State<WeatherPage> {
   final List<Gradient> myColor = [
     LinearGradient(
-      colors: [
-        Colors.blue,
-        Colors.red,
-      ],
+      colors: [Colors.black, Colors.red],
       begin: Alignment.centerLeft,
       end: Alignment.centerRight,
     ),
@@ -32,25 +29,21 @@ class _WeatherPageState extends State<WeatherPage> {
       //     ),
       //   ),
       // ),
-
       body: Container(
-        decoration: BoxDecoration(
-          gradient: myColor[0],
-        ),
+        decoration: BoxDecoration(gradient: myColor[0]),
         child: Expanded(
           child: Container(
             margin: EdgeInsets.all(50),
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(20
-              ),
+              borderRadius: BorderRadius.circular(20),
             ),
             child: Column(
               children: [
                 SizedBox(height: 20),
-                Image.network(
-                  'https://picsum.photos/seed/picsum/100/150',
-                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image.network('https://picsum.photos/seed/picsum/100/150')),
                 SizedBox(height: 20),
                 Center(
                   child: Column(
@@ -70,16 +63,11 @@ class _WeatherPageState extends State<WeatherPage> {
                         child: TextField(
                           decoration: InputDecoration(
                             hintText: 'Cari kata kunci...',
-                            hintStyle: TextStyle(
-                              color: Colors.grey,
-                            ),
+                            hintStyle: TextStyle(color: Colors.grey),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
-                            suffixIcon: Icon(
-                              Icons.search,
-                            ),
-                            if
+                            suffixIcon: Icon(Icons.search),
                           ),
                         ),
                       ),
@@ -88,9 +76,7 @@ class _WeatherPageState extends State<WeatherPage> {
                 ),
                 SizedBox(height: 20),
                 // GestureDetector(
-                //   onTap: () {
-                    
-                //   },
+                //   onTap: () {},
                 //   child: Container(
                 //     width: 100,
                 //     height: 40,
@@ -115,14 +101,8 @@ class _WeatherPageState extends State<WeatherPage> {
                       borderRadius: BorderRadius.circular(5),
                     ),
                   ),
-                  child: Text('Cari', 
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                  onPressed: () {
-                    
-                  },
+                  child: Text('Cari', style: TextStyle(color: Colors.white)),
+                  onPressed: () {},
                 ),
               ],
             ),
@@ -130,14 +110,9 @@ class _WeatherPageState extends State<WeatherPage> {
         ),
       ),
       floatingActionButton: FloatingActionButton.small(
-        onPressed: () {
-          
-        },
+        onPressed: () {},
         backgroundColor: Colors.blue,
-        child: Icon(
-          Icons.refresh, 
-          color: Colors.white
-        ),
+        child: Icon(Icons.refresh, color: Colors.white),
       ),
     );
   }
