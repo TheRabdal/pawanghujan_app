@@ -43,7 +43,8 @@ class _WeatherPageState extends State<WeatherPage> {
                 SizedBox(height: 20),
                 ClipRRect(
                   borderRadius: BorderRadius.circular(10),
-                  child: Image.network('https://picsum.photos/seed/picsum/100/150')),
+                  child: Image.network('https://picsum.photos/seed/picsum/100/150'),
+                ),
                 SizedBox(height: 20),
                 Center(
                   child: Column(
@@ -98,10 +99,14 @@ class _WeatherPageState extends State<WeatherPage> {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5),
+                      borderRadius: BorderRadius.circular(10),
                     ),
                   ),
-                  child: Text('Cari', style: TextStyle(color: Colors.white)),
+                  child: Text('Cari', 
+                  style: TextStyle(
+                    color: Colors.white
+                    ),
+                  ),
                   onPressed: () {},
                 ),
               ],
@@ -112,7 +117,10 @@ class _WeatherPageState extends State<WeatherPage> {
       floatingActionButton: FloatingActionButton.small(
         onPressed: () {},
         backgroundColor: Colors.blue,
-        child: Icon(Icons.refresh, color: Colors.white),
+        child: Icon(
+          Icons.refresh, 
+          color: Colors.white,
+        ),
       ),
     );
   }
