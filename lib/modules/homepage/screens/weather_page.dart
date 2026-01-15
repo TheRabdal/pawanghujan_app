@@ -107,7 +107,16 @@ class _WeatherPageState extends State<WeatherPage> {
                     color: Colors.white
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return HasilCuacaPage();
+                        },
+                      ),
+                    );
+                  },
                 ),
               ],
             ),

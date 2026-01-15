@@ -55,10 +55,9 @@ tugas :
 - coba cari yang melibatkan stackoverflow
 */
 
-/*References:
+/*References: https://www.youtube.com/watch?v=nxeN4dTtifE&t=778s
 gradient background : https://stackoverflow.com/questions/79208959/creating-a-split-background-in-flutter/79209629#79209629
 floating action button : https://www.youtube.com/watch?v=XxbTFkmQ1wk
-
-// curved bottom navbar : https://pub.dev/packages/curved_labeled_navigation_bar
-//   - https://www.youtube.com/watch?v=2TGgFVd0b-w
+curved bottom navbar : https://pub.dev/packages/curved_labeled_navigation_bar
+  - https://www.youtube.com/watch?v=2TGgFVd0b-w
 */
