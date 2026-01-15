@@ -1,124 +1,104 @@
-import 'package:pawanghujan_app/core/widgets/reset.dart';
 import 'package:pawanghujan_app/packages/packages.dart';
 
 class WeatherPage extends StatefulWidget {
-  const WeatherPage({super.key});
+  final String tempat;
+
+  const WeatherPage({super.key, required this.tempat});
 
   @override
   State<WeatherPage> createState() => _WeatherPageState();
 }
 
 class _WeatherPageState extends State<WeatherPage> {
+  TextEditingController tempatController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // extendBodyBehindAppBar: true,
       appBar: AppBar(
+        actions: [
+          GestureDetector(
+            onTap: () {},
+            child: Padding(
+              padding: EdgeInsets.only(right: 20),
+              child: Icon(Icons.medical_services),
+            ),
+          ),
+        ],
         backgroundColor: Colors.white,
         centerTitle: true,
         title: Text(
           'Pawang Hujan',
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
       ),
-      
       body: Container(
         decoration: BoxDecoration(gradient: myColor[0]),
-        child: Padding(
-          padding: EdgeInsets.only(top: 10),
-          child: Expanded(
-            child: Container(
-              margin: EdgeInsets.all(50),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
+        child: Container(
+          margin: EdgeInsets.all(50),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Column(
+            children: [
+              SizedBox(height: 50),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.network('https://picsum.photos/200/300?grayscale'),
               ),
-              child: Column(
-                children: [
-                  SizedBox(height: 20),
-                  ClipRRect(
+              SizedBox(height: 20),
+              Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Selamat datang di Pawang Hujan!',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Padding(
+                      padding: EdgeInsets.only(left: 30, right: 30),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Cari kata kunci...',
+                          hintStyle: TextStyle(color: Colors.grey),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          suffixIcon: Icon(Icons.clean_hands_sharp),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
-                    child: Image.network('https://picsum.photos/200/300?grayscale'),
                   ),
-                  SizedBox(height: 20),
-                  Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Selamat datang di Pawang Hujan!',
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(height: 20),
-                        Padding(
-                          padding: EdgeInsets.only(left: 30, right: 30),
-                          child: TextField(
-                            decoration: InputDecoration(
-                              hintText: 'Cari kata kunci...',
-                              hintStyle: TextStyle(color: Colors.grey),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              suffixIcon: Icon(Icons.search),
-                            ),
-                          ),
-                        ),
-                      ],
+                ),
+                child: Text('Cari', style: TextStyle(color: Colors.white)),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return HasilCuacaPage(tempat: tempatController.text);
+                      },
                     ),
-                  ),
-                  SizedBox(height: 20),
-                  // GestureDetector(
-                  //   onTap: () {},
-                  //   child: Container(
-                  //     width: 100,
-                  //     height: 40,
-                  //     decoration: BoxDecoration(
-                  //       color: Colors.blue,
-                  //       borderRadius: BorderRadius.circular(5),
-                  //     ),
-                  //     child: Center(
-                  //       child: Text(
-                  //         'Cari',
-                  //         style: TextStyle(
-                  //           color: Colors.white,
-                  //         ),
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                    child: Text('Cari', 
-                    style: TextStyle(
-                      color: Colors.white
-                      ),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return HasilCuacaPage();
-                          },
-                        ),
-                      );
-                    },
-                  ),
-                ],
+                  );
+                },
               ),
-            ),
+            ],
           ),
         ),
       ),
@@ -126,4 +106,3 @@ class _WeatherPageState extends State<WeatherPage> {
     );
   }
 }
-

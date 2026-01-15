@@ -9,9 +9,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WeatherPage(),
+      home: WeatherPage(tempat: 'Indonesia'),
     );
   }
 }
@@ -28,6 +28,7 @@ tugas :
 
 /*References: 
 main : https://www.youtube.com/watch?v=nxeN4dTtifE&t=778s
+note : buat fitur note atau catatan dengan shared preferences
 gradient background : https://stackoverflow.com/questions/79208959/creating-a-split-background-in-flutter/79209629#79209629
 floating action button : https://www.youtube.com/watch?v=XxbTFkmQ1wk
 curved bottom navbar : https://pub.dev/packages/curved_labeled_navigation_bar
