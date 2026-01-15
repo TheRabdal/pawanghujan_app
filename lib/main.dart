@@ -18,35 +18,6 @@ class MyApp extends StatelessWidget {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 tugas : 
 - buat aplikasi baru apapun
@@ -60,4 +31,7 @@ gradient background : https://stackoverflow.com/questions/79208959/creating-a-sp
 floating action button : https://www.youtube.com/watch?v=XxbTFkmQ1wk
 curved bottom navbar : https://pub.dev/packages/curved_labeled_navigation_bar
   - https://www.youtube.com/watch?v=2TGgFVd0b-w
+bottom navigation bar liquid glass : https://www.youtube.com/watch?v=Lz5mPDbFiD4
+blur navigatin bar : https://www.youtube.com/watch?v=sESnF6ITxgk
+border radius pada appbar : 
 */

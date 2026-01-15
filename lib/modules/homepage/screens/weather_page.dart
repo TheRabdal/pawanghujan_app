@@ -8,18 +8,12 @@ class WeatherPage extends StatefulWidget {
 }
 
 class _WeatherPageState extends State<WeatherPage> {
-  final List<Gradient> myColor = [
-    LinearGradient(
-      colors: [Colors.black, Colors.red],
-      begin: Alignment.centerLeft,
-      end: Alignment.centerRight,
-    ),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // extendBodyBehindAppBar: true,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         centerTitle: true,
         title: Text(
           'Pawang Hujan',
@@ -31,94 +25,97 @@ class _WeatherPageState extends State<WeatherPage> {
       ),
       body: Container(
         decoration: BoxDecoration(gradient: myColor[0]),
-        child: Expanded(
-          child: Container(
-            margin: EdgeInsets.all(50),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Column(
-              children: [
-                SizedBox(height: 20),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Image.network('https://picsum.photos/seed/picsum/100/150'),
-                ),
-                SizedBox(height: 20),
-                Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Selamat datang di Pawang Hujan!',
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 20),
-                      Padding(
-                        padding: EdgeInsets.only(left: 20, right: 20),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            hintText: 'Cari kata kunci...',
-                            hintStyle: TextStyle(color: Colors.grey),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            suffixIcon: Icon(Icons.search),
+        child: Padding(
+          padding: EdgeInsets.only(top: 10),
+          child: Expanded(
+            child: Container(
+              margin: EdgeInsets.all(50),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Column(
+                children: [
+                  SizedBox(height: 20),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.network('https://picsum.photos/seed/picsum/100/150'),
+                  ),
+                  SizedBox(height: 20),
+                  Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Selamat datang di Pawang Hujan!',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 20),
-                // GestureDetector(
-                //   onTap: () {},
-                //   child: Container(
-                //     width: 100,
-                //     height: 40,
-                //     decoration: BoxDecoration(
-                //       color: Colors.blue,
-                //       borderRadius: BorderRadius.circular(5),
-                //     ),
-                //     child: Center(
-                //       child: Text(
-                //         'Cari',
-                //         style: TextStyle(
-                //           color: Colors.white,
-                //         ),
-                //       ),
-                //     ),
-                //   ),
-                // ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
+                        SizedBox(height: 20),
+                        Padding(
+                          padding: EdgeInsets.only(left: 30, right: 30),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              hintText: 'Cari kata kunci...',
+                              hintStyle: TextStyle(color: Colors.grey),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              suffixIcon: Icon(Icons.search),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  child: Text('Cari', 
-                  style: TextStyle(
-                    color: Colors.white
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return HasilCuacaPage();
-                        },
+                  SizedBox(height: 20),
+                  // GestureDetector(
+                  //   onTap: () {},
+                  //   child: Container(
+                  //     width: 100,
+                  //     height: 40,
+                  //     decoration: BoxDecoration(
+                  //       color: Colors.blue,
+                  //       borderRadius: BorderRadius.circular(5),
+                  //     ),
+                  //     child: Center(
+                  //       child: Text(
+                  //         'Cari',
+                  //         style: TextStyle(
+                  //           color: Colors.white,
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                    );
-                  },
-                ),
-              ],
+                    ),
+                    child: Text('Cari', 
+                    style: TextStyle(
+                      color: Colors.white
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return HasilCuacaPage();
+                          },
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
         ),
