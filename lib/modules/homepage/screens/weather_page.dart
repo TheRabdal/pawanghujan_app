@@ -23,6 +23,7 @@ class _WeatherPageState extends State<WeatherPage> {
           ),
         ),
       ),
+      
       body: Container(
         decoration: BoxDecoration(gradient: myColor[0]),
         child: Padding(
