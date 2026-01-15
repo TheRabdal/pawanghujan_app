@@ -34,5 +34,6 @@ curved bottom navbar : https://pub.dev/packages/curved_labeled_navigation_bar
   - https://www.youtube.com/watch?v=2TGgFVd0b-w
 bottom navigation bar liquid glass : https://www.youtube.com/watch?v=Lz5mPDbFiD4
 blur navigatin bar : https://www.youtube.com/watch?v=sESnF6ITxgk
-
+wrapping scaffold with container for gradient background : https://stackoverflow.com/questions/53408917/wrapping-scaffold-with-container-for-gradient-background-how-to-set-gradient-to
 */
+

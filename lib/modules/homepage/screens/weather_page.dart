@@ -1,3 +1,4 @@
+import 'package:pawanghujan_app/core/widgets/reset.dart';
 import 'package:pawanghujan_app/packages/packages.dart';
 
 class WeatherPage extends StatefulWidget {
@@ -40,7 +41,7 @@ class _WeatherPageState extends State<WeatherPage> {
                   SizedBox(height: 20),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(10),
-                    child: Image.network('https://picsum.photos/seed/picsum/100/150'),
+                    child: Image.network('https://picsum.photos/200/300?grayscale'),
                   ),
                   SizedBox(height: 20),
                   Center(
@@ -121,14 +122,8 @@ class _WeatherPageState extends State<WeatherPage> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton.small(
-        onPressed: () {},
-        backgroundColor: Colors.blue,
-        child: Icon(
-          Icons.refresh, 
-          color: Colors.white,
-        ),
-      ),
+      floatingActionButton: CustomeReset(),
     );
   }
 }
+
