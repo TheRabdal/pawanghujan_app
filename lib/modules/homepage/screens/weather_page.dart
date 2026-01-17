@@ -1,16 +1,15 @@
 import 'package:pawanghujan_app/packages/packages.dart';
 
 class WeatherPage extends StatefulWidget {
-  final String tempat;
 
-  const WeatherPage({super.key, required this.tempat});
+  const WeatherPage({super.key});
 
   @override
   State<WeatherPage> createState() => _WeatherPageState();
 }
 
 class _WeatherPageState extends State<WeatherPage> {
-  TextEditingController tempatController = TextEditingController();
+  TextEditingController placeController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +45,7 @@ class _WeatherPageState extends State<WeatherPage> {
               SizedBox(height: 50),
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
-                child: Image.network('https://picsum.photos/200/300?grayscale'),
+                child: Image.asset('assets/logopawanghujan.png'),
               ),
               SizedBox(height: 20),
               Center(
@@ -65,6 +64,7 @@ class _WeatherPageState extends State<WeatherPage> {
                     Padding(
                       padding: EdgeInsets.only(left: 30, right: 30),
                       child: TextField(
+                        controller: placeController,
                         decoration: InputDecoration(
                           hintText: 'Cari kata kunci...',
                           hintStyle: TextStyle(color: Colors.grey),
@@ -92,7 +92,7 @@ class _WeatherPageState extends State<WeatherPage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return HasilCuacaPage(tempat: tempatController.text);
+                        return HasilCuacaPage(place: placeController.text);
                       },
                     ),
                   );
