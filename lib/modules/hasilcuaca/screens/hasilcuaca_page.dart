@@ -67,7 +67,7 @@ class _HasilCuacaPageState extends State<HasilCuacaPage> {
                   return Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Suhu: ${data['weather']['main']['feels_like']} °C', 
+                      Text('Suhu: ${data['main']['feels_like']} °C', 
                       style: TextStyle(
                           fontSize: 20,
                         ),
