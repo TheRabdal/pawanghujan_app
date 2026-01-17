@@ -1,7 +1,7 @@
 import 'package:pawanghujan_app/packages/packages.dart';
 
 class FromApi extends Equatable {
-  FromApi({
+  const FromApi({
     required this.koordinat,
     required this.cuaca,
     required this.basis,
@@ -89,7 +89,7 @@ class FromApi extends Equatable {
 
   Map<String, dynamic> toJson() => {
     "koordinat": koordinat?.toJson(),
-    "cuaca": cuaca.map((x) => x?.toJson()).toList(),
+    "cuaca": cuaca.map((x) => x.toJson()).toList(),
     "basis": basis,
     "utama": Map.from(utama).map((k, v) => MapEntry<String, dynamic>(k, v)),
     "jarakpandang": jarakpandang,
@@ -127,7 +127,7 @@ class FromApi extends Equatable {
 }
 
 class Angin extends Equatable {
-  Angin({
+  const Angin({
     required this.kecepatan,
     required this.derajat,
     required this.embusan,
@@ -169,7 +169,7 @@ class Angin extends Equatable {
 }
 
 class Awan extends Equatable {
-  Awan({required this.semua});
+  const Awan({required this.semua});
 
   final int? semua;
 
@@ -193,7 +193,7 @@ class Awan extends Equatable {
 }
 
 class Cuaca extends Equatable {
-  Cuaca({
+  const Cuaca({
     required this.id,
     required this.utama,
     required this.deskripsi,
@@ -240,7 +240,7 @@ class Cuaca extends Equatable {
 }
 
 class Koordinat extends Equatable {
-  Koordinat({required this.bujur, required this.lintang});
+  const Koordinat({required this.bujur, required this.lintang});
 
   final int? bujur;
   final int? lintang;
@@ -268,7 +268,7 @@ class Koordinat extends Equatable {
 }
 
 class Sistem extends Equatable {
-  Sistem({
+  const Sistem({
     required this.negara,
     required this.matahariterbit,
     required this.matahariterbenam,

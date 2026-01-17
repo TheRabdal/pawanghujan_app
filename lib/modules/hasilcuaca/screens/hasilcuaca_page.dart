@@ -50,27 +50,29 @@ class _HasilCuacaPageState extends State<HasilCuacaPage> {
           margin: EdgeInsets.all(50),
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(50)
+            borderRadius: BorderRadius.circular(50),
           ),
           child: Center(
             child: FutureBuilder(
               future: getDataFromAPI(),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-
                   return CircularProgressIndicator();
                 }
-                    
+
+                if (snapshot.hasError) {
+                  return Text('Error: ${snapshot.error}');
+                }
+
                 if (snapshot.hasData) {
                   final data = snapshot.data!;
-                    
+
                   return Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Suhu: ${data['main']['feels_like']} °C', 
-                      style: TextStyle(
-                          fontSize: 20,
-                        ),
+                      Text(
+                        'Suhu: ${data['cuaca']['utama']} °C',
+                        style: TextStyle(fontSize: 20),
                       ),
                     ],
                   );
