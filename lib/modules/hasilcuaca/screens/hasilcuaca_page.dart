@@ -60,10 +60,6 @@ class _HasilCuacaPageState extends State<HasilCuacaPage> {
                   return CircularProgressIndicator();
                 }
 
-                if (snapshot.hasError) {
-                  return Text('Error: ${snapshot.error}');
-                }
-
                 if (snapshot.hasData) {
                   final data = snapshot.data!;
 

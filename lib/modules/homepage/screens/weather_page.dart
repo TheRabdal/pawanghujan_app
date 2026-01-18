@@ -18,7 +18,9 @@ class _WeatherPageState extends State<WeatherPage> {
       appBar: AppBar(
         actions: [
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              
+            },
             child: Padding(
               padding: EdgeInsets.only(right: 20),
               child: Icon(Icons.note_add),
