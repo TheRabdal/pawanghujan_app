@@ -113,7 +113,6 @@ class _HasilCuacaPageState extends State<HasilCuacaPage> {
           ),
         ),
       ),
-      floatingActionButton: CustomeReset(),
     );
   }
 }

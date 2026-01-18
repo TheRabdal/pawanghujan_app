@@ -105,7 +105,6 @@ class _WeatherPageState extends State<WeatherPage> {
           ),
         ),
       ),
-      floatingActionButton: CustomeReset(),
     );
   }
 }
