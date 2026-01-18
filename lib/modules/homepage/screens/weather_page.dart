@@ -21,7 +21,7 @@ class _WeatherPageState extends State<WeatherPage> {
             onTap: () {},
             child: Padding(
               padding: EdgeInsets.only(right: 20),
-              child: Icon(Icons.medical_services),
+              child: Icon(Icons.note_add),
             ),
           ),
         ],
@@ -29,7 +29,10 @@ class _WeatherPageState extends State<WeatherPage> {
         centerTitle: true,
         title: Text(
           'Pawang Hujan',
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontSize: 18, 
+            fontWeight: FontWeight.bold
+          ),
         ),
       ),
       body: Container(

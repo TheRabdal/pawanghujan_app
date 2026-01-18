@@ -67,11 +67,40 @@ class _HasilCuacaPageState extends State<HasilCuacaPage> {
                 if (snapshot.hasData) {
                   final data = snapshot.data!;
 
-                  return Row(
+                  return Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      Image.network(
+                        'https://openweathermap.org/img/wn/${data['weather'][0]['icon']}@2x.png',
+                        height: 200,
+                        width: 200,
+                      ),
                       Text(
-                        'Suhu: ${data['cuaca']['utama']} °C',
+                        'Nama Tempat: ${data['name']}',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      Text(
+                        'Kode Negara: ${data['sys']['country']}',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      Text(
+                        'Cuaca: ${data['weather'][0]['main']}',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      Text(
+                        'Suhu: ${data['main']['temp']} °C',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      Text(
+                        'Kelembaban: ${data['main']['humidity']} %',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      Text(
+                        'Tekanan: ${data['main']['pressure']} hPa',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      Text(
+                        'Kecepatan Angin: ${data['wind']['speed']} m/s',
                         style: TextStyle(fontSize: 20),
                       ),
                     ],
