@@ -1,0 +1,1 @@
+export 'datahasil.dart';
