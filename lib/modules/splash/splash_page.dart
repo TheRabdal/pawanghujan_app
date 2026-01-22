@@ -30,7 +30,7 @@ class _SplashPageState extends State<SplashPage> {
       backgroundColor: Colors.black,
       body: Center(
         child: Image.asset(
-          'assets/splashpawanghujan.gif',
+          'assets/splash_pawanghujan.gif',
           width: 500,
           height: 400,
         ),

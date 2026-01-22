@@ -46,12 +46,11 @@ class _WeatherPageState extends State<WeatherPage> {
                 // ClipRRect(
                 //   borderRadius: BorderRadius.circular(10),
                 //   child:
-                Image.asset('assets/logopawanghujan.png'),
+                Image.asset('assets/logo_pawanghujan.png'),
                 // ),
                 SizedBox(height: 15),
                 Center(
                   child: Column(
-                    // mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         'Selamat datang di Pawang Hujan!',
