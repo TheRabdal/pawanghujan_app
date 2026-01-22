@@ -22,7 +22,7 @@ class _GetStartedPageState extends State<GetStartedPage> {
                 Icon(Icons.cloud_queue, size: 100, color: Colors.white),
                 SizedBox(height: 32),
                 Text(
-                  'PawangHujan',
+                  'Pawang Hujan',
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
@@ -40,10 +40,14 @@ class _GetStartedPageState extends State<GetStartedPage> {
         ),
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => WeatherPage()),
+          );
+        },
         backgroundColor: Colors.white,
-        label: Text('Next', style: TextStyle(color: Colors.black)),
-        icon: Icon(Icons.arrow_forward, color: Colors.black),
+        label: Text('Get Started', style: TextStyle(color: Colors.black)),
       ),
     );
   }
