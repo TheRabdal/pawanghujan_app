@@ -1,2 +1,2 @@
-export 'utils/utils.dart';
 export 'shared/shared.dart';
+export 'utils/utils.dart';

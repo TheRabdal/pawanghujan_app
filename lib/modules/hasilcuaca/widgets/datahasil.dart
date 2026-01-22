@@ -43,6 +43,10 @@ class DataHasil extends StatelessWidget {
           style: TextStyle(fontSize: 20),
         ),
         Text(
+          'Koordinat: ${data['coord']['lon']}, ${data['coord']['lat']}',
+          style: TextStyle(fontSize: 20),
+        ),
+        Text(
           'Kecepatan Angin: ${data['wind']['speed']} m/s',
           style: TextStyle(fontSize: 20),
         ),
