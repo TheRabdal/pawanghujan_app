@@ -1,13 +1,13 @@
 import 'package:pawanghujan_app/packages/packages.dart';
 
-class OnboardingPage extends StatefulWidget {
-  const OnboardingPage({super.key});
+class GetStartedPage extends StatefulWidget {
+  const GetStartedPage({super.key});
 
   @override
-  State<OnboardingPage> createState() => _OnboardingPageState();
+  State<GetStartedPage> createState() => _GetStartedPageState();
 }
 
-class _OnboardingPageState extends State<OnboardingPage> {
+class _GetStartedPageState extends State<GetStartedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,11 +19,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
-                  Icons.cloud_queue,
-                  size: 100,
-                  color: Colors.white,
-                ),
+                Icon(Icons.cloud_queue, size: 100, color: Colors.white),
                 SizedBox(height: 32),
                 Text(
                   'PawangHujan',
@@ -46,8 +42,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {},
         backgroundColor: Colors.white,
+        label: Text('Next', style: TextStyle(color: Colors.black)),
         icon: Icon(Icons.arrow_forward, color: Colors.black),
-        label: Text('Next'),
       ),
     );
   }

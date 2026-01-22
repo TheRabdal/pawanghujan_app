@@ -10,30 +10,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, 
-      home: SplashPage(),
+      debugShowCheckedModeBanner: false,
+      home: GetStartedPage(),
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*References: 
 main API : https://www.youtube.com/watch?v=nxeN4dTtifE&t=778s
