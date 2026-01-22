@@ -71,14 +71,6 @@ class _HasilCuacaPageState extends State<HasilCuacaPage> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Colors.blue,
-        child: Icon(
-          Icons.map,
-          color: Colors.white,
-        ),
-      ),
     );
   }
 }
