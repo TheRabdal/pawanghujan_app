@@ -79,7 +79,6 @@ class _HasilCuacaPageState extends State<HasilCuacaPage> {
           color: Colors.white,
         ),
       ),
-      ),
     );
   }
 }
