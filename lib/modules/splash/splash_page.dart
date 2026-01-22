@@ -11,7 +11,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 8), () {
+    Future.delayed(Duration(seconds: 5), () {
       if (mounted) {
           Navigator.pushReplacement(
             context,
