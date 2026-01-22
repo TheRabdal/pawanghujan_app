@@ -1,5 +1,4 @@
 import 'package:pawanghujan_app/packages/packages.dart';
-import 'package:http/http.dart' as http;
 
 class HasilCuacaPage extends StatefulWidget {
   final String place;
@@ -12,14 +11,12 @@ class HasilCuacaPage extends StatefulWidget {
 
 class _HasilCuacaPageState extends State<HasilCuacaPage> {
   Future<Map<String, dynamic>> getDataFromAPI() async {
-    final response = await http.get(
-      Uri.parse(
+    final response = await DioLogger.instance.get(
         'https://api.openweathermap.org/data/2.5/weather?q=${widget.place}&APPID=a3a15bcc8380c218abe51e70a2cf300f&units=metric',
-      ),
     );
 
     if (response.statusCode == 200) {
-      final data = json.decode(response.body);
+      final data = response.data;
 
       return data;
     } else {

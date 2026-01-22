@@ -17,6 +17,7 @@ class _WeatherPageState extends State<WeatherPage> {
         actions: [
           NoteButton()
         ],
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         centerTitle: true,
         title: Text(
