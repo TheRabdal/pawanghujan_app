@@ -16,6 +16,36 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*References: 
 main API : https://www.youtube.com/watch?v=nxeN4dTtifE&t=778s
 main Note : https://www.youtube.com/watch?v=K4lpubQ55Q0
