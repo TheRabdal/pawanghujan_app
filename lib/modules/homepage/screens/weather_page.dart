@@ -89,14 +89,6 @@ class _WeatherPageState extends State<WeatherPage> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Colors.blue,
-        child: Icon(
-          Icons.map,
-          color: Colors.white,
-        ),
-      ),
     );
   }
 }
